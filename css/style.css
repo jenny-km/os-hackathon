@@ -1,0 +1,364 @@
+/*
+    Font size:
+    Font color:
+    Font style:
+*/
+
+* {
+  font-family: "Open Sans", arial, sans-serif;
+}
+
+#header-wrapper {
+  background-color: rgba(255, 255, 255, 0);
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* Header*/
+header {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.294),
+    rgba(0, 0, 0, 0.5)
+  );
+  font: Bold 14px/1.4 "Open Sans", arial, sans-serif;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background 0.1s ease, height 0.1s ease;
+}
+
+header .top-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header .top-bar ul {
+  margin: 150px auto 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+header .top-bar li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 8px 20px 10px 20px;
+  position: relative;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header .top-bar li a:hover {
+  color: #ebebebb6;
+}
+
+header .top-bar li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #ffcccb;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+header .top-bar li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+header .container-fluid {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding-right: 20px;
+}
+
+header .top-bar li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header .top-bar li {
+  display: table-cell;
+  position: relative;
+  padding: 8px 5px 10px 5px;
+}
+
+header .top-bar .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+/*Header on Scroll*/
+.sticky {
+  background-color: #fff;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  box-shadow: 0 3px 1rem 0 rgba(0, 0, 0, 0.205) !important;
+  height: 60px;
+  transition: background-color 0.1s ease, height 0.1s ease;
+}
+
+.sticky .top-bar a {
+  color: #313131;
+}
+
+.sticky li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #313131;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.sticky li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.sticky li a:hover {
+  color: #1f1f1f55 !important;
+}
+
+/* Landing Page Photo*/
+
+.landing-photo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background-image: url("http://kim.inakanomado02.com/wp-content/uploads/2021/05/980-8.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  position: relative;
+}
+
+.landing-photo-gradient-layer {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.514)
+  );
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-photo-text {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 35%;
+  position: absolute;
+  text-align: center;
+  font-family: "Open Sans", arial, sans-serif;
+  font-weight: bold;
+  text-shadow: black 1px 0 50px;
+}
+
+.intro-small {
+  font-size: 20px;
+  padding-bottom: 10px;
+  color: rgb(24, 24, 24);
+}
+
+.intro-medium {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.intro-large {
+  font-size: 90px;
+}
+
+.short-line {
+  height: 4px !important;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.short-line-container {
+  z-index: 1;
+  width: 100%;
+}
+
+.bounce {
+  color: #fff;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  margin-top: -25px;
+  margin-left: -25px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    bottom: 5px;
+  }
+  25%,
+  75% {
+    bottom: 15px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+/*For color change background*/
+
+.color-transparent {
+  background-color: #fff !important;
+  transition: background-color 1s ease;
+}
+.color-lightBlue {
+  background-color: #c3c9d0 !important;
+  transition: background-color 1s ease;
+}
+.color-black {
+  background-color: #242424 !important;
+  transition: background-color 1s ease;
+}
+
+/*For mobile menus*/
+
+.mobile-menu-icon {
+  display: none !important;
+  padding-right: 30px;
+  color: #313131;
+}
+
+.mobile-menu-icon :hover {
+  color: #1f1f1f55 !important;
+}
+
+@media screen and (max-width: 768px) {
+  #menu-primary-menu {
+    position: absolute;
+    right: 0px;
+    height: 50vh;
+    top: 80px;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.753),
+      rgba(0, 0, 0, 0.294)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    overflow-x: hidden;
+    transition: transform 0.5s ease-in, top 0.1s ease,
+      background-color 0.1s ease;
+    -webkit-overflow-scrolling: auto;
+  }
+  #menu-primary-menu li a {
+    color: #fff;
+  }
+  #menu-primary-menu li a:hover {
+    color: #ebebebb6;
+  }
+  #menu-primary-menu li {
+    opacity: 0;
+  }
+  .mobile-menu-icon {
+    display: block !important;
+    color: #fff !important;
+    cursor: pointer;
+  }
+  .mobile-menu-icon:hover {
+    color: #ebebebb6;
+  }
+  .sticky-mobile-icon i {
+    color: #313131 !important;
+  }
+  .sticky-mobile-menu {
+    background-image: linear-gradient(
+      to top,
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)
+    ) !important;
+    top: 64px !important;
+    transition: top 0.3s ease, background-image 0.1s ease;
+  }
+  .sticky-mobile-menu li a {
+    color: #313131 !important;
+  }
+  .sticky-mobile-menu li a:hover {
+    color: #1f1f1f55 !important;
+  }
+  .mobile-menu-active {
+    transform: translateX(0%) !important;
+  }
+  .landing-photo-text {
+    top: 38vh !important;
+  }
+  .intro-medium {
+    font-size: 6vw !important;
+  }
+  .intro-large {
+    font-size: 10vw !important;
+  }
+}
+
+@keyframes mobileMenuFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
